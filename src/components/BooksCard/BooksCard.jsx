@@ -10,7 +10,7 @@ const BooksCard = ({ book }) => {
       <div className="card  shadow-xl my-12 transition hover:scale-105 border-2 border-blue-100 hover:border-blue-300 ">
         <figure className="p-4 rounded-xl">
           <img
-            className=" py-6 px-28 bg-[#F3F3F3] rounded-2xl"
+            className=" py-6 px-28 bg-[#F3F3F3] rounded-2xl h-60"
             src={image}
             alt="Shoes"
           />

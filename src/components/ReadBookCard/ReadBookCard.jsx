@@ -77,7 +77,7 @@ const ReadBookCard = ({ readBook }) => {
             Rating : <span>{rating} </span>
           </p>
           <Link to={`/book/${id}`}>
-            <button className="btn btn-sm bg-[#23BE0A] text-white rounded-full ">
+            <button className="btn btn-sm bg-[#23BE0A] text-white rounded-full border-2 border-transparent hover:border-[#23BE0A] hover:bg-transparent hover:text-[#23BE0A] ">
               View Details
             </button>
           </Link>
