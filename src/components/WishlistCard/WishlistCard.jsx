@@ -25,7 +25,7 @@ const WishlistCard = ({wishlist}) => {
       </figure>
       <div className=" flex-grow-0 space-y-4 py-6 px-4 text-center lg:text-start">
         <h2 className=" text-center lg:text-start text-3xl font-bold">
-          {name}{" "}
+          {name}
         </h2>
         <p className="mb-0">
           By : <span>{author} </span>

@@ -1,15 +1,13 @@
-
 import ReadBookCard from "../ReadBookCard/ReadBookCard";
 import { useContext, useEffect, useState } from "react";
-import { getReadBooks } from "../utilities/utilites";
-import { SortContext } from "./../ListedBooks/ListedBooks";
+
+import { getReadBooks } from "../../utilities/utilities";
+import { SortContext } from "../../pages/ListedBooks/ListedBooks";
 
 const ReadBooks = () => {
   const [readBooks, setReadBooks] = useState([]);
 
   const sortValue = useContext(SortContext);
-
-  console.log(sortValue);
 
   useEffect(() => {
     const storedReadBooks = getReadBooks();
@@ -20,7 +18,6 @@ const ReadBooks = () => {
 
   //   console.log(sortedBooks);
 
-  console.log(readBooks);
   return (
     <div className="mt-8">
       {sortedBooks.length > 0 ? (

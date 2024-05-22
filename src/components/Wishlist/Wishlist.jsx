@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
+import { SortContext } from "../../pages/ListedBooks/ListedBooks";
+import { getWishlist } from "../../utilities/utilities";
 import WishlistCard from "../WishlistCard/WishlistCard";
-import { getWishlist } from "../utilities/utilites";
-import { SortContext } from "../ListedBooks/ListedBooks";
+
 
 const Wishlist = () => {
   const [wishlists, setWishlists] = useState([]);
@@ -23,7 +24,6 @@ const Wishlist = () => {
         ))
       ) : (
         <div className="text-center mt-20 text-4xl text-red-500 font-bold">
-
           <p>You do not have any books in your wishlist</p>
         </div>
       )}

@@ -1,8 +1,17 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { createContext, useState } from "react";
+import { Link, Outlet } from "react-router-dom";
+
+export const SortContext = createContext("sortedValue");
 
 const ListedBooks = () => {
   const [tabIndex, setTabIndex] = useState(0);
+
+  const [sortResult, setSortResult] = useState("");
+
+  const handleSelect = (e) => {
+    const sortValue = e.target.value;
+    setSortResult(sortValue);
+  };
 
   return (
     <div>
@@ -12,7 +21,7 @@ const ListedBooks = () => {
 
       <div className="text-center my-12 w-64 py-2 text-white rounded-lg mx-auto bg-[#23BE0A]">
         <label>Sort by :</label>
-        <select className=" mx-2  bg-[#23BE0A]">
+        <select className=" mx-2  bg-[#23BE0A]" onChange={handleSelect}>
           <option></option>
           <option value="rating">Rating</option>
           <option value="totalPages">Number of Pages</option>
@@ -41,6 +50,9 @@ const ListedBooks = () => {
           <span>Wishlist Books</span>
         </Link>
       </div>
+      <SortContext.Provider value={sortResult}>
+        <Outlet></Outlet>
+      </SortContext.Provider>
     </div>
   );
 };
