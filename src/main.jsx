@@ -10,6 +10,8 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import ListedBooks from "./pages/ListedBooks/ListedBooks";
 import ReadBooks from "./components/ReadBooks/ReadBooks";
 import Wishlist from "./components/Wishlist/Wishlist";
+import PagesToRead from "./pages/PagesToRead/PagesToRead";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
           },
         ],
       },
+      {
+        path: "/pages-to-read",
+        element: <PagesToRead></PagesToRead>,
+      },
+      {
+        path:'/contact',
+        element:<ContactUs></ContactUs>
+      }
     ],
   },
 ]);
