@@ -1,14 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
-import "./Nav.css";
+
+
 
 const NavBar = () => {
   
   return (
     <div className="flex flex-col lg:flex-row  justify-between items-center py-4">
       <div>
-        <Link to={"/"} className=" text-3xl font-extrabold font-works">
-          <span className="text-[#23BE0A]">Book</span>
-          <span className="text-[#59C6D2]">Worm</span>
+        <Link to={"/"} className=" text-3xl font-extrabold ">
+          <span className="text-[#23BE0A] font-works">Book</span>
+          <span className="text-[#59C6D2] font-works">Worm</span>
         </Link>
       </div>
 
