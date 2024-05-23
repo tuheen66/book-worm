@@ -7,7 +7,7 @@ const AboutUs = () => {
     <div>
       <AboutBanner></AboutBanner>
 
-      <div className="about-container">
+      <div className="about-container mb-8">
         <p>
           Welcome to <span>Book Worm</span>, your ultimate online destination
           for all things books! Founded with a passion for reading and a
@@ -149,7 +149,7 @@ const AboutUs = () => {
           reading and the endless possibilities that books bring.
         </p>
         <p>Happy Reading!</p>
-        <p>
+        <p className="text-2xl">
           The <span>Book Worm</span> Team
         </p>
       </div>
